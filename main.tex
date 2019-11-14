@@ -1,8 +1,6 @@
 \documentclass[slideopt,A4,showboxes,svgnames]{beamer}
 
-
 %% list of packages here
-
 \renewcommand{\sfdefault}{lmss}
 \sffamily
 
@@ -22,51 +20,28 @@ allcolors=rouge_inria,
 \newcommand{\GRAND}{\fontsize{100}{100}\selectfont}
 \newcommand{\Grand}{\fontsize{80}{80}\selectfont}
 \newcommand{\grand}{\fontsize{60}{60}\selectfont}
-%% TODO : diminuer taille du titre dans la partie haute (cadre gris) : OK, on peut encore diminuer si besoin --> c'est Ok pour moi
-%% Grossir le titre général sur slide 1 + le centrer (1 ou 2 lignes) : J'ai grossi et déplacé le texte sur la droite et un peu en haut. Faut-il encore le bouger ? --> C'est bien ainsi :-)
 
-%% Le sous-titre en dessous puis l'auteur en dernier et en moins gros : Fait > VU
-%% Slide 2 : on peut bien grossir le chiffre (01), slide 4 idem (02) et slide 6 aussi : Je viens de mettre trois tailles différentes, du plus petit au plus gros, sur les trois chapitres, dis-moi celle qui convient le mieux, ou s'il faut ajuster entre deux.
-%% --> je ne vois qu'une taille mais c'est la bonne :-)
-%% supprimer le texte dans la partie rouge en haut à gauche sur toutes les slides : OK
-%% Logo seul sans baseline sur toutes les occurrences :OK
-%% Réduire en taille ce logo : partout (sur la page de titre et en pied de page)? Ou juste en pied de page? --> juste en pied de page, en alignant horizontalement à droite, à l'aplomb du fond blanc
-
-%% Un point rouge simple sans ombré pour les puces : OK
 \title[titrecourt]{Titre sur une ligne\\ ou deux}
 \subtitle{sous-titre}
 \date[date]{date}
 \author[Auteur]{Auteur}
 
-\usetheme{inria}
-%\usetheme{inria2}
-%\usetheme{inria3}
+
+\usepackage{theme/beamerthemeinria}
+%\usepackage{theme/beamerthemeinria2}
+%\usepackage{theme/beamerthemeinria3}
 
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Titre de la présentation avec format Inria
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{frame}
     \titlepage
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%Plan de la présentation
-
-%Chapitre 1 
- \frame{\tocpage}
+\frame{\tocpage}
  
- \section{Titre du chapitre}
- \frame{\sectionpage}
- 
-                  
-
+\section{Titre du chapitre}
+\frame{\sectionpage}
 
 \begin{frame}{Deux exemples de blocs}
     \begin{block}{}
@@ -92,8 +67,6 @@ allcolors=rouge_inria,
     \end{itemize}
   \end{block}
 \end{frame}
-
-
 
 
 %Chapitre 2
