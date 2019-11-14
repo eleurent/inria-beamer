@@ -3,6 +3,9 @@
 %% list of packages here
 \usepackage[absolute,showboxes,overlay]{textpos}
 \usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
 \input{mathdef}
 
 \usepackage{theme/beamerthemeinria}
@@ -11,10 +14,9 @@
 
 
 \title[titrecourt]{Titre sur une ligne\\ ou deux}
-\subtitle{sous-titre}
 \date[date]{date}
 \author[Auteur]{Auteur}
-
+\subtitle{Affiliations}
 
 \begin{document}
 
@@ -29,28 +31,24 @@
 \frame{\sectionpage}
 
 \begin{frame}{Deux exemples de blocs}
-    \begin{block}{}
- \begin{itemize}
-    \item{Item 1 }
-    \begin{itemize}
-        \item {Sous-item 1}
- \item {Sous-item 2}
-        \begin{itemize}
-        \item {Sous-sous-item 1}
+\begin{block}{Block}
+\begin{itemize}
+\item{Item 1 }
+\begin{itemize}
+\item {Sous-item 1}
+\item {Sous-item 2}
+\begin{itemize}
+\item {Sous-sous-item 1}
 \item {Sous-sous-item 2}
-    \end{itemize}
-    \end{itemize}
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{block}
-      \begin{block}{Avec titre}
- \begin{itemize}
-    \item{Item 1 }
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{block}
+\end{itemize}
+\end{itemize}
+\item {Item 2}
+\item {Item 3}
+\end{itemize}
+\end{block}
+\begin{exampleblock}{Example block}
+Ceci est un texte
+\end{exampleblock}
 \end{frame}
 
 
@@ -58,46 +56,22 @@
 \section{Titre du chapitre}
  \frame{\sectionpage}
 
-
-\begin{frame}{Deux autres exemples de blocs}
-    \begin{alertblock}{}
- \begin{itemize}
-    \item{Item 1 }
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{alertblock}
-      \begin{alertblock}{Avec titre}
- \begin{itemize}
-    \item{Item 1 }
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{alertblock}
+\begin{frame}{Titre}
+\begin{alertblock}{Alert block}
+	This is a list:
+	\begin{itemize}
+	\item[\green \checkmark]{Item 1}
+	\item[\red \xmark]{Item 2}
+	\end{itemize}
+\end{alertblock}
 \end{frame}
 
 %Chapitre 3
 \section{Titre du chapitre}
  \frame{\sectionpage}
 
-\begin{frame}{Deux autres exemples de blocs}
-    \begin{exampleblock}{}
- \begin{itemize}
-    \item{Item 1 }
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{exampleblock}
-      \begin{exampleblock}{Avec titre}
- \begin{itemize}
-    \item{Item 1 }
-    \item {Item 2}
-    \item {Item 3}
-    \end{itemize}
-  \end{exampleblock}
-\end{frame}
 \begin{frame}{Titre}
-Du \textcolor{gris_fonce_inria}{texte}  {en}  \textcolor{rouge_inria}{couleur} 
+Du \textcolor{gris_fonce_inria}{texte}  {en}  \textcolor{rouge_inria}{couleur}, et \alert{important}
 \end{frame}
 \section{Conclusion}
 \begin{frame}{Conclusion}

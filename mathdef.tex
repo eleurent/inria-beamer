@@ -3,7 +3,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Paper dependent stuff    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newcommand{\ux}{\alert{\underline{x}(t)}}
+\newcommand{\ox}{\alert{\overline{x}(t)}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,6 +127,26 @@
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \newcommand{\eqdef}{\buildrel \text{def}\over =}
+
+
+\usepackage{amsmath}
+\DeclareFontFamily{U}{mathb}{}
+\DeclareFontShape{U}{mathb}{m}{n}{
+	<-5.5> mathb5
+	<5.5-6.5> mathb6
+	<6.5-7.5> mathb7
+	<7.5-8.5> mathb8
+	<8.5-9.5> mathb9
+	<9.5-11.5> mathb10
+	<11.5-> mathb12
+}{}
+\DeclareSymbolFont{mathb}{U}{mathb}{m}{n}
+\DeclareMathSymbol{\ulsh}{3}{mathb}{"E8}
+\DeclareMathSymbol{\ursh}{3}{mathb}{"E9}
+\DeclareMathSymbol{\dlsh}{3}{mathb}{"EA}
+\DeclareMathSymbol{\drsh}{3}{mathb}{"EB}
+
+\newcommand{\xmark}{\ding{55}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Matrix operators         %
