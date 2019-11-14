@@ -1,35 +1,20 @@
 \documentclass[slideopt,A4,showboxes,svgnames]{beamer}
 
 %% list of packages here
-\renewcommand{\sfdefault}{lmss}
-\sffamily
-
-\setbeamersize{text margin left=1cm,text margin right=1cm}
-\setbeamerfont{alerted text}{series=\bfseries}
-\setbeamerfont{example text}{series=\bfseries}
-
 \usepackage[absolute,showboxes,overlay]{textpos}
+\usepackage{mathtools}
+\input{mathdef}
 
-\TPshowboxesfalse
-\textblockorigin{0mm}{0mm}
+\usepackage{theme/beamerthemeinria}
+%\usepackage{theme/beamerthemeinria2}
+%\usepackage{theme/beamerthemeinria3}
 
-\hypersetup{
-allcolors=rouge_inria,
-}
-
-\newcommand{\GRAND}{\fontsize{100}{100}\selectfont}
-\newcommand{\Grand}{\fontsize{80}{80}\selectfont}
-\newcommand{\grand}{\fontsize{60}{60}\selectfont}
 
 \title[titrecourt]{Titre sur une ligne\\ ou deux}
 \subtitle{sous-titre}
 \date[date]{date}
 \author[Auteur]{Auteur}
 
-
-\usepackage{theme/beamerthemeinria}
-%\usepackage{theme/beamerthemeinria2}
-%\usepackage{theme/beamerthemeinria3}
 
 \begin{document}
 

@@ -1,6 +1,26 @@
 %\ProvidesPackageRCS theme_inria.sty
 \mode<presentation>
 
+\renewcommand{\sfdefault}{lmss}
+\sffamily
+
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamerfont{example text}{series=\bfseries}
+
+\TPshowboxesfalse
+\textblockorigin{0mm}{0mm}
+
+\hypersetup{
+	allcolors=rouge_inria,
+}
+
+\newcommand{\GRAND}{\fontsize{100}{100}\selectfont}
+\newcommand{\Grand}{\fontsize{80}{80}\selectfont}
+\newcommand{\grand}{\fontsize{60}{60}\selectfont}
+
+
+
 \RequirePackage{tikz}
 \RequirePackage[absolute,showboxes,overlay]{textpos}
 \RequirePackage{fmtcount}
