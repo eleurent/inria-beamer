@@ -1,0 +1,58 @@
+%\ProvidesPackageRCS theme_inria.sty
+\mode<presentation>
+
+\RequirePackage{tikz}
+\RequirePackage[absolute,showboxes,overlay]{textpos}
+\RequirePackage{fmtcount}
+\RequirePackage{calc}
+
+\usecolortheme{inria3}
+\useoutertheme{inria3}
+\useinnertheme{inria3}
+
+\setbeamerfont{block title}{size={}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded] 
+
+%\useinnertheme[shadow=false]{rounded}
+%\setbeamercolor{item projected}{bg=chipColor,fg=chipTextColor}
+%\setbeamerfont{section number projected}{%
+%  family=\rmfamily,series=\bfseries,size=\normalsize}
+\setbeamertemplate{section number projected}{default}
+\setbeamercolor{section number projected}{bg=white,fg=rouge_inria}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{enumerate subitems}[default]
+%\setbeamertemplate{item projected}[default]
+\setbeamertemplate{itemize items}{$\color{rouge_inria}\bullet$}
+\setbeamertemplate{itemize subitem}{$\color{rouge_inria}{>}$}
+\setbeamertemplate{itemize subsubitem}{$\color{black}{-}$}
+%\setbeamertemplate{enumerate items}{$\color{rouge_inria}{\bullet}$}
+\setbeamercolor{itemize items}{fg=rouge_inria}
+\setbeamercolor{itemize subitems}{fg=rouge_inria}
+  \setbeamertemplate{section in toc}{\textcolor{rouge_inria}{{\two@digits{\inserttocsectionnumber}}.}.~\textcolor{white}{\inserttocsection}}
+\pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%
+color(0pt)=(frametitle.bg);
+color(\paperwidth)=(frametitle right.bg)}
+\AtBeginDocument{
+\pgfdeclareverticalshading{beamer@topshade}{\paperwidth}{%
+color(0pt)=(bg);
+color(4pt)=(black!50!bg)}
+}
+
+
+
+\setbeamerfont{frametitle}{size=\normalsize}
+\defbeamertemplate*{frametitle}{shadow theme}
+{
+\hbox{\leavevmode
+\advance\beamer@leftmargin by -12bp%
+\advance\beamer@rightmargin by -12bp%
+\beamer@tempdim=\textwidth%
+\advance\beamer@tempdim by \beamer@leftmargin%
+\advance\beamer@tempdim by \beamer@rightmargin%
+\hspace*{4cm}\vspace*{-1cm}\bf \small \insertframetitle\vspace*{0.1cm}%
+}}
+
+
+\mode
+<all> 

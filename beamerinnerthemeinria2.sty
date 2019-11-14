@@ -1,0 +1,89 @@
+\mode<presentation>
+\defbeamertemplate*{title page}{inria}[1][]
+{
+                \begin{tikzpicture} 
+                \useasboundingbox (1,12.6) rectangle(\the\paperwidth,\the\paperheight);
+\filldraw [color=white] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
+\filldraw [color=gris_fonce_inria] (0.7,14.3) -- (12.1,14.3) -- (12.1,6.5) -- (0.7,6.5) -- cycle;
+\filldraw [color=rouge_inria] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
+  \node at (2.5,13.5) {\includegraphics[width=0.25\textwidth]{Figs/Inria_logo-blanc.png}};
+              \end{tikzpicture}
+\begin{textblock*}{13cm}(50mm,45mm)
+ {\textcolor{white} {
+     {\LARGE   \inserttitle}\\[4mm]
+  %  { \huge 2 LIGNES MAXIMUM}\\[3mm]
+ {\insertsubtitle}\\[3mm]
+ {\insertauthor}
+ 	}}
+ 	\end{textblock*}
+                 }
+\setbeamertemplate{background canvas}{
+    \begin{tikzpicture}
+        \ifnum\thepage>1\relax%
+ \filldraw [color=white] (0,15) -- (4.8,15) -- (4.8,14.3) -- (0,14.3) -- cycle;
+\filldraw [color=rouge_inria] (15,15) -- (4.8,15) -- (4.8,14.3) -- (15,14.3) -- cycle;
+\filldraw [color=rouge_inria] (12.8,15) -- (12.1,15) -- (12.1,0) -- (12.8,0) -- cycle;
+%\filldraw [color=rouge_inria] (0,0) -- (0.7,0) -- (0.7,6) -- (0,6) -- cycle;
+\filldraw [color=rouge_inria] (0,0) -- (0.,6.5) -- (15,6.5) -- (15,0) -- cycle;
+\filldraw [color=rouge_inria] (0,0) -- (0.,10) -- (.7,10) -- (.7,0) -- cycle;
+\filldraw [color=white] (0,15) -- (0.,10) -- (.7,10) -- (.7,15) -- cycle;
+\node at (10.7,6.) {\includegraphics[width=.2\textwidth]{Figs/Inria_logo-blanc.png}};
+        \fi
+    \end{tikzpicture}
+}
+
+\defbeamertemplate*{section page}{inria}[1][]
+{
+  % draw full square 
+     \begin{tikzpicture}          
+       \useasboundingbox (1,12.27) rectangle(\the\paperwidth,\the\paperheight);
+\filldraw [color=rouge_inria] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
+\filldraw [color=white] (0.7,14.3) -- (12.1,14.3) -- (12.1,6.5) -- (0.7,6.5) -- cycle;
+\filldraw [color=white] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
+  \node at (10.7,6.) {\includegraphics[width=.2\textwidth]{Figs/Inria_logo-blanc.png}}; 
+              \end{tikzpicture}
+    % section number in top-left red square
+ 
+\begin{textblock*}{10cm}(60mm,45mm)
+{\textcolor{rouge_inria}{\LARGE \insertsection} }
+\end{textblock*}
+\begin{textblock*}{13cm}(10mm,20mm)
+ {\textcolor{rouge_inria} {
+     { {\GRAND {\padzeroes[2]{\decimal{section}}}}}
+ 	}}
+ 	\end{textblock*}
+}
+\defbeamertemplate*{toc page}{inria}[1][]
+{
+                \setbeamertemplate{footline}{
+                   \vspace*{-0.025\paperheight}
+\raisebox{12.5ex}{\textcolor{rouge_inria}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
+                }
+                                   \begin{tikzpicture}          
+                \useasboundingbox (1,12.6) rectangle(\the\paperwidth,\the\paperheight);
+\filldraw [color=white] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
+\filldraw [color=gris_fonce_inria] (0.7,14.3) -- (12.1,14.3) -- (12.1,6.5) -- (0.7,6.5) -- cycle;
+\filldraw [color=rouge_inria] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
+  \node at (10.7,6.) {\includegraphics[width=.2\textwidth]{Figs/Inr_logo_rouge.png}}; 
+              \end{tikzpicture}
+    % section number in top-left red square
+ \begin{textblock*}{10cm}(60mm,35mm)
+ {\tableofcontents}
+ 	\end{textblock*}
+ \begin{textblock*}{13cm}(10mm,30mm)
+ {\textcolor{white} {
+     {\LARGE   Sommaire}
+ 	}}
+ 	\end{textblock*}
+               \setbeamertemplate{footline}{
+                   \ifnum\thepage>1\relax
+                   \vspace*{-0.025\paperheight}
+\raisebox{12.5ex}{\textcolor{white}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
+                 \fi
+                }
+      }
+
+\def\tocpage{\usebeamertemplate*{toc page}}
+
+
+\mode<all>
