@@ -1,20 +1,21 @@
 \mode<presentation>
 \defbeamertemplate*{title page}{inria}[1][]
 {
-                \begin{tikzpicture} 
-                \useasboundingbox (1,12.6) rectangle(\the\paperwidth,\the\paperheight);
+\begin{tikzpicture} 
+\useasboundingbox (1,12.6) rectangle(\the\paperwidth,\the\paperheight);
 \filldraw [color=white] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
 \filldraw [color=gris_fonce_inria] (0.7,14.3) -- (12.1,14.3) -- (12.1,6.5) -- (0.7,6.5) -- cycle;
 \filldraw [color=rouge_inria] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
   \node at (2.5,13.5) {\includegraphics[width=0.25\textwidth]{theme/img/Inria_logo-blanc.png}};
-              \end{tikzpicture}
-\begin{textblock*}{13cm}(50mm,35mm)
- {\textcolor{white} {
-     {\Large   \inserttitle}\\[4mm]
-  %  { \huge 2 LIGNES MAXIMUM}\\[3mm]
+\end{tikzpicture}
+\begin{textblock*}{13cm}(50mm,45mm)
+{\textcolor{white} {
+{\LARGE   \inserttitle}\\[4mm]  
+% {\huge 2 LIGNES MAXIMUM}\\[3mm]
+% {\insertsubtitle}\\[3mm]
  {\insertauthor}\\[3mm]
- {\insertsubtitle}
- 	}}
+ {\insertinstitute}
+}}
  	\end{textblock*}
                  }
 \setbeamertemplate{background canvas}{

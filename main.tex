@@ -6,17 +6,19 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{pifont}
-\input{mathdef}
 
 \usepackage{theme/beamerthemeinria}
 %\usepackage{theme/beamerthemeinria2}
 %\usepackage{theme/beamerthemeinria3}
 
+\input{mathdef}
+\input{theme/style}
 
 \title[titrecourt]{Titre sur une ligne\\ ou deux}
+\subtitle{Sous-titre}
 \date[date]{date}
-\author[Auteur]{Auteur}
-\subtitle{Affiliations}
+\author[Auteur]{Auteur$^1$}
+\institute{$^1$ Affiliation}
 
 \begin{document}
 
@@ -30,25 +32,32 @@
 \section{Titre du chapitre}
 \frame{\sectionpage}
 
-\begin{frame}{Deux exemples de blocs}
+\begin{frame}{Examples of blocks}
 \begin{block}{Block}
 \begin{itemize}
-\item{Item 1 }
-\begin{itemize}
-\item {Sous-item 1}
-\item {Sous-item 2}
-\begin{itemize}
-\item {Sous-sous-item 1}
-\item {Sous-sous-item 2}
-\end{itemize}
-\end{itemize}
-\item {Item 2}
-\item {Item 3}
+\item{Item 1}
+\item{Item 2}
+\item{Item 3}
 \end{itemize}
 \end{block}
 \begin{exampleblock}{Example block}
-Ceci est un texte
+This is great!
 \end{exampleblock}
+\begin{alertblock}{Alert block}
+This is problematic.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Math environnements}
+\begin{assumption}[Easy setting]
+	This is convenient.
+	\[x = 0\]
+\end{assumption}
+\begin{theorem}[Main result]
+	This is a fact.
+	\[x + 1 = 1\]
+\end{theorem}
 \end{frame}
 
 
@@ -56,22 +65,34 @@ Ceci est un texte
 \section{Titre du chapitre}
  \frame{\sectionpage}
 
-\begin{frame}{Titre}
-\begin{alertblock}{Alert block}
-	This is a list:
+\begin{frame}{Lists}
+This is a list:
+\begin{itemize}
+	\item Normal item
 	\begin{itemize}
-	\item[\green \checkmark]{Item 1}
-	\item[\red \xmark]{Item 2}
+		\item {Sub-item 1}
+		\item {Sub-item 2}
+		\begin{itemize}
+			\item {Sub-sub-item 1}
+			\item {Sub-sub-item 2}
+		\end{itemize}
 	\end{itemize}
-\end{alertblock}
+	\item[\green \checkmark]{Good item}
+	\item[\red \xmark]{Bad item}
+	\item[\red $\drsh$]{Implied item}
+\end{itemize}
 \end{frame}
 
 %Chapitre 3
 \section{Titre du chapitre}
  \frame{\sectionpage}
 
-\begin{frame}{Titre}
-Du \textcolor{gris_fonce_inria}{texte}  {en}  \textcolor{rouge_inria}{couleur}, et \alert{important}
+\begin{frame}{Highlights}
+Du texte en \textcolor{gris_fonce_inria}{gris}, en  \textcolor{rouge_inria}{rouge}, en  {\green vert}, en {\blue bleu} et \alert{important}
+
+\[\dot x = \hleg{f(x)} + {\green g(u)}\]
+\[\dot x = \hler{f(x)} + {\red g(u)}\]
+\[\dot x = \hleb{f(x)} + {\blue g(u)} + \alert{h(t)}\]
 \end{frame}
 \section{Conclusion}
 \begin{frame}{Conclusion}
