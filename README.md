@@ -3,3 +3,4 @@ The new INRIA beamer template, using the [latest graphical chart](https://intran
 
 It was reorganized and slightly modified. The original source can be found [here](https://intranet.inria.fr/Vie-pratique/Informer-Communiquer/Identite-l-essentiel/Gabarits-mis-a-disposition)
 
+You can also use the [old template branch](https://github.com/eleurent/inria-beamer/tree/old-template)
